@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/main.js",
+  "scripts": {
+    "dev": "electron ./build/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express-http-proxy": "^1.6.1",
+    "@types/http-proxy-middleware": "^1.0.0",
+    "@types/koa": "^2.13.1",
+    "electron": "12.0.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6"
+  },
+  "files": [
+    "build"
+  ]
+}
