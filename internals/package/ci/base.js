@@ -1,16 +1,33 @@
-const { exec } = require("child_process");
-const path = require("path");
 const electronBuilder = require("electron-builder");
 class Base {
+  // 打包配置
+  config = {};
+
+  /**
+   * @description 打包钩子，可以在打包之后定义一些需要做的事情，比如文件拷贝
+   */
+  beforBuild() {}
+
+  /**
+   * @description 打包，集成打包流程
+   */
   build() {
-    // const electronBuildPath = path.join(process.cwd(), "electron-builder");
-
-    // exec(`electron-builder`, (error, stdout, stderr) => {
-    //   console.error(error);
-    // });
-
-    electronBuilder.build(require('../config/mac'))
+    this.beforBuild();
+    this.electronBuild();
+    this.beforBuild();
   }
+
+  /**
+   * @description 打包，使用electron-builder构建打包
+   */
+  electronBuild() {
+    electronBuilder.build(this.config);
+  }
+
+  /**
+   * @description 打包钩子，可以在打包之后定义一些需要做的事情，比如安装包的定制，需要进行二次打包的
+   */
+  afterBuild() {}
 }
 
-module.exports = new Base();
+module.exports = Base;

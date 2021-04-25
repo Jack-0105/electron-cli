@@ -1,6 +1,16 @@
 const os = require("os");
-const ci = require("./ci/base");
+const { MacBuild } = require("./ci");
 
-const platform = process.env.platform || os.platform();
+(function build() {
+  const platform = process.env.platform || os.platform();
 
-ci.build();
+  switch (platform) {
+    case "darwin":
+      new MacBuild().build();
+      break;
+    case "win32":
+      break;
+    case "linux":
+      break;
+  }
+})();
