@@ -8,7 +8,7 @@ console.error(path.join(process.cwd(), "app/build"));
 module.exports = require("./webpack.base")({
   mode: "production",
   devtool: "eval-source-map",
-  entry: path.join(process.cwd(), "app/src/main.ts"),
+  entry: path.join(process.cwd(), "app/src/index.ts"),
   output: {
     path: path.join(process.cwd(), "app/build"),
     libraryTarget: "commonjs2",
