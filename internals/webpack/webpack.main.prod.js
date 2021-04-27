@@ -8,9 +8,14 @@ console.error(path.join(process.cwd(), "app/build"));
 module.exports = require("./webpack.base")({
   mode: "production",
   devtool: "eval-source-map",
-  entry: path.join(process.cwd(), "app/src/index.ts"),
+  entry: {
+    main: path.join(process.cwd(), "app/src/index.ts"),
+    preloadMain: path.join(process.cwd(), "app/src/preloadScript/main.ts"),
+    preloadRender: path.join(process.cwd(), "app/src/preloadScript/render.ts"),
+  },
   output: {
     path: path.join(process.cwd(), "app/build"),
+    globalObject: "this",
     libraryTarget: "commonjs2",
   },
   target: "electron-main",

@@ -9,7 +9,7 @@
     "declaration": false,
     "removeComments": true,
     "noImplicitReturns": true,
-    "lib": ["es6", "es7"],
+    "lib": ["es6", "es7", "dom"],
     "allowSyntheticDefaultImports": true,
     "types": ["node"],
     "skipLibCheck": true
