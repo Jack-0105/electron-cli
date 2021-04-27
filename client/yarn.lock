@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+electron-proxy@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/electron-proxy/-/electron-proxy-1.0.12.tgz#142abc3d1d2521e6d630ac6656347b5eed0fb6e0"
+  integrity sha512-TC4fowE/uZ/4ACQ7DX+kbOgdyC2TUfwT7vFEkPrmrIb7Xi+a4AnL8I2OjPiXFht0fcQwAUTfgJ+i5siHiMG7zQ==
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"

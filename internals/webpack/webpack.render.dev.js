@@ -21,5 +21,9 @@ module.exports = require("./webpack.base")({
     modules: ["client", "node_modules"],
     extensions: [".js", ".jsx", ".ts", ".tsx", ".react.js"],
     mainFields: ["browser", "jsnext:main", "main"],
+    alias: {
+      "@common": path.join(process.cwd(), "client/common"),
+      "@login": path.join(process.cwd(), "client/modules/login"),
+    },
   },
 });

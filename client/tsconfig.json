@@ -13,6 +13,10 @@
     "lib": ["es6", "es7", "dom"],
     "allowSyntheticDefaultImports": true,
     "types": ["node"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@common/*": ["./common/*"],
+      "@login/*": ["./modules/login/*"]
+    }
   }
 }
